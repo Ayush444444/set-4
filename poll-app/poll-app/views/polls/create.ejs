@@ -1,0 +1,49 @@
+<div class="row justify-content-center">
+  <div class="col-md-8">
+    <div class="card border-0 shadow-lg">
+      <div class="card-body p-5">
+        <h1 class="text-center mb-4"><i class="fas fa-plus-circle me-2"></i>Create Poll</h1>
+        <form id="create-poll-form">
+          <div class="mb-3">
+            <label for="title" class="form-label">Poll Question</label>
+            <input type="text" class="form-control" id="title" name="title" required maxlength="100">
+            <div class="form-text">Maximum 100 characters</div>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Poll Options (2-5 options)</label>
+
+            <div id="options-container">
+              <div class="option-input mb-2">
+                <div class="input-group">
+                  <span class="input-group-text">1</span>
+                  <input type="text" class="form-control" name="options[]" required>
+                </div>
+              </div>
+
+              <div class="option-input mb-2">
+                <div class="input-group">
+                  <span class="input-group-text">2</span>
+                  <input type="text" class="form-control" name="options[]" required>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-2">
+              <button type="button" id="add-option" class="btn btn-outline-secondary btn-sm">
+                <i class="fas fa-plus me-1"></i>Add Option
+              </button>
+              <button type="button" id="remove-option" class="btn btn-outline-danger btn-sm" disabled>
+                <i class="fas fa-minus me-1"></i>Remove Option
+              </button>
+            </div>
+          </div>
+
+          <div class="d-grid mt-4">
+            <button type="submit" class="btn btn-primary btn-lg">Create Poll</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<% if(typeof messages !== 'undefined') { %>
+  <% Object.entries(messages).forEach(([type, message]) => { %>
+    <div class="alert alert-<%= type === 'error' ? 'danger' : type %> alert-dismissible fade show" role="alert">
+      <%= message %>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  <% }); %>
+<% } %>
+
+<div id="alert-container"></div>

@@ -1,0 +1,52 @@
+<div class="row justify-content-center">
+  <div class="col-md-8">
+    <div class="card border-0 shadow-lg">
+      <div class="card-body p-5">
+        <div id="poll-container">
+          <div class="text-center">
+            <div class="spinner-border text-primary" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+          </div>
+        </div>
+
+        <template id="poll-template">
+          <div class="poll-details">
+            <h1 class="poll-title mb-4"></h1>
+            <p class="text-muted small">
+              <i class="fas fa-user me-1"></i><span class="poll-creator"></span> •
+              <i class="fas fa-clock me-1"></i><span class="poll-date"></span>
+            </p>
+
+            <div class="mt-4 vote-section">
+              <h5>Cast Your Vote</h5>
+              <form id="vote-form">
+                <div class="list-group options-list mb-3">
+                  <!-- Options will be added here dynamically -->
+                </div>
+                <div class="d-grid">
+                  <button type="submit" class="btn btn-primary btn-lg">Vote</button>
+                </div>
+              </form>
+            </div>
+
+            <div class="already-voted-message alert alert-info d-none mt-4">
+              <i class="fas fa-info-circle me-2"></i>You have already voted on this poll.
+            </div>
+
+            <div class="login-to-vote-message alert alert-warning d-none mt-4">
+              <i class="fas fa-exclamation-triangle me-2"></i>Please <a href="/login">login</a> to vote on this poll.
+            </div>
+
+            <div class="mt-5 results-section">
+              <h4>Results</h4>
+              <div class="poll-results">
+                <canvas id="results-chart"></canvas>
+              </div>
+            </div>
+          </div>
+        </template>
+      </div>
+    </div>
+  </div>
+</div>
